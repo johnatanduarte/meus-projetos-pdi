@@ -1,0 +1,29 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build with OpenCV",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "${workspaceFolder}/main.cpp",
+                "-o",
+                "${workspaceFolder}/webcam.exe",
+                "-I",
+                "C:/opencv/build/include",
+                "-I",
+                "C:/opencv/build/include/opencv2",
+                "-L",
+                "C:/opencv/build/x64/vc16/lib",
+                "-std=c++14",
+                "-pthread",
+                "-lopencv_world4100"  // Nome correto da biblioteca
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}
